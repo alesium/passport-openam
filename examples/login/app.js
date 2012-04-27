@@ -1,7 +1,7 @@
 var express = require('express')
   , passport = require('passport')
   , util = require('util')
-  , OpenAmStrategy = require('passport-openam').Strategy;
+  , OpenAmStrategy = require('../../lib/passport-openam').Strategy;
 
 
 // Passport session setup.
@@ -25,7 +25,7 @@ passport.deserializeUser(function(obj, done) {
 // credentials (in this case, an accessToken, refreshToken, and Facebook
 // profile), and invoke a callback with a user object.
 passport.use(new OpenAmStrategy({
-    callbackURL: "http://localhost:3000/auth/openam/callback",
+    callbackUrl: "http://sebasp.alesium.net:3000/auth/openam/callback",
     openAmBaseUrl: "http://sebasp.alesium.net/openam/"
   },
   function(token, profile, done) {
@@ -51,10 +51,10 @@ app.configure(function() {
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
   app.use(express.logger());
-  app.use(express.cookieParser());
+  app.use(express.cookieParser('session'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.session({ secret: 'keyboard cat' }));
+  app.use(express.session());
   // Initialize Passport! Also use passport.session() middleware, to support
   // persistent login sessions (recommended).
   app.use(passport.initialize());
