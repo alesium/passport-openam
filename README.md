@@ -8,6 +8,8 @@ integrated into any application or framework that supports
 [Connect](http://www.senchalabs.org/connect/)-style middleware, including
 [Express](http://expressjs.com/).
 
+OpenAM is an open source access management, entitlements and federation server platform.
+
 ## Installation
 
     $ npm install passport-openam
