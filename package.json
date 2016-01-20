@@ -1,6 +1,6 @@
 {
   "name": "passport-openam",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "OpenAm authentication strategies for Passport.",
   "author": { "name": "Sebastien Perreault", "email": "sebasp@gmail.com", "url": "http://www.alesium.net/" },
   "repository": {

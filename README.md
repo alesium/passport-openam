@@ -23,6 +23,7 @@ OpenAM is an open source access management, entitlements and federation server p
 
   - [Jared Hanson] (https://github.com/jaredhanson)
   - [Sebastien Perreault] (https://github.com/sperreault)
+  - [kurtfm] (https://github.com/kurtfm)
 
 ## License
 
